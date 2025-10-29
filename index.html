@@ -1,51 +1,118 @@
-<button onclick="install()">instalo Apache24</button>
-<link rel="shortcut icon" type="image/jpg" href="veri.jpg">
-<button onclick="ngrok()" style="top: 5cm;">Instalo Ngrok</button>
-<p>Developed By Ardit Berisha © ℗®™</p>
-<title>APACHE 24</title>
-<script>
-    function install(){
-        window.location = "apache24.zip"
-    }
-</script>
-<script>
-function ngrok(){
-window.location = "ngrok.rar"
-}
-</script>
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apache24 & Ngrok Installer</title>
+<link rel="shortcut icon" href="veri.jpg" type="image/jpg">
 <style>
-html{
- background:linear-gradient(to left,#fdeb71, #32ccbc);
-}
-button{
-   
-    position: absolute;
-    left: 9.5cm;
-    top: 7cm;
-    width: 14cm;
-    height: 50px;
-    background: cornflowerblue;
-    border: thick;
-    border-radius: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    margin-bottom:2cm;
-}
-button:hover{
-    background: crimson;
-}
-p{
-    font-size: 30px;
-}
-    footer p{
-    position: relative;
-        bottom:-12cm;
-        font-size:40px;
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Poppins", sans-serif;
+        color: #e0e6f0;
+        background: radial-gradient(circle at top right, #0a2342, #081c36 60%, #020c1b);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        color: #5ab9ea;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(90, 185, 234, 0.7);
+    }
+
+    button {
+        width: 300px;
+        height: 60px;
+        margin: 15px;
+        background: linear-gradient(135deg, #007cf7, #406bdf);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: 0 0 20px rgba(0, 124, 247, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #1e90ff, #5a00ff);
+        box-shadow: 0 0 25px rgba(90, 185, 255, 0.6);
+        transform: scale(1.05);
+    }
+
+    footer {
+        position: absolute;
+        bottom: 40px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 18px;
+        margin: 6px 0;
+        color: #b0bed5;
+    }
+
+    a.github {
+        color: #5ab9ea;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    a.github:hover {
+        text-decoration: underline;
+        color: #7cd1ff;
+    }
+
+    .glow {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(0,124,247,0.2) 0%, transparent 80%);
+        top: -150px;
+        right: -150px;
+        border-radius: 50%;
+        z-index: -1;
+        filter: blur(40px);
+        animation: pulse 5s infinite alternate;
+    }
+
+    @keyframes pulse {
+        from { opacity: 0.3; transform: scale(1); }
+        to { opacity: 0.6; transform: scale(1.1); }
     }
 </style>
+</head>
+
+<body>
+<div class="glow"></div>
+
+<h1>Apache24 & Ngrok Setup</h1>
+
+<button onclick="install()">Install Apache24</button>
+<button onclick="ngrok()">Install Ngrok</button>
 
 <footer>
-    <p style="font-size:30px;">Aplikacionet per Krijimin  e Serverit </p>
-    <p style="font-size:30px;">Ju Lutem Ndiqni Instruksionet </p>
-    <p style="font-size:30px;" style="font-size: 30px;"><i>Programi Apache24 U Zhvillua Nga Ardit Berisha</i></p>
+    <p>Developed by <strong>Ardit Berisha</strong> © ℗®™</p>
+    <p><a class="github" href="https://github.com/arditbe" target="_blank">github.com/arditbe</a></p>
+    <p><i>Aplikacionet për krijimin e serverit - Ndiqni udhëzimet</i></p>
 </footer>
+
+<script>
+function install() {
+    window.location = "apache24.zip";
+}
+function ngrok() {
+    window.location = "ngrok.rar";
+}
+</script>
+</body>
+</html>
